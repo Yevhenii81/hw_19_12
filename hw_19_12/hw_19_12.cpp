@@ -492,82 +492,78 @@ public:
 int main()
 {
 
-    Phone myPhone; // Выведет "C-TOR without parameters"
-    Phone myPhoneWithArgs("Samsung", "Galaxy S21", 256, "AMOLED", true); // Выведет "C-TOR with 5 parameters"
+//Тестирование класса Phone
+Phone myPhone;
+myPhone.SetBrand("Iphone");
+myPhone.SetModel("11");
+myPhone.SetStorageSizeGB(128);
+myPhone.SetDisplayType("AMOLED");
+myPhone.SetIsSmartphone(true);
 
+cout << "Phone Details:\n";
+cout << "Brand: " << myPhone.GetBrand() << "\n";
+cout << "Model: " << myPhone.GetModel() << "\n";
+cout << "Storage Size: " << myPhone.GetStorageSizeGB() << "GB" << "\n";
+cout << "Display Type: " << myPhone.GetDisplayType() << "\n";
+cout << "Is Smartphone? " << (myPhone.GetIsSmartphone() ? "Yes" : "No") << "\n";
 
-    ////Тестирование класса Phone
-    //Phone myPhone;
-    //myPhone.SetBrand("Iphone");
-    //myPhone.SetModel("11");
-    //myPhone.SetStorageSizeGB(128);
-    //myPhone.SetDisplayType("AMOLED");
-    //myPhone.SetIsSmartphone(true);
+// Тестирование класса Pan
+Pan myPen;
+myPen.SetBrand("Parker");
+myPen.SetColor("Blue");
+myPen.SetTipType("Ballpoint");
+myPen.SetIsClickable(true);
+myPen.SetInkType("Gel");
 
-    //cout << "Phone Details:\n";
-    //cout << "Brand: " << myPhone.GetBrand() << "\n";
-    //cout << "Model: " << myPhone.GetModel() << "\n";
-    //cout << "Storage Size: " << myPhone.GetStorageSizeGB() << "GB" << "\n";
-    //cout << "Display Type: " << myPhone.GetDisplayType() << "\n";
-    //cout << "Is Smartphone? " << (myPhone.GetIsSmartphone() ? "Yes" : "No") << "\n";
+cout << "Pen Details:\n";
+cout << "Brand: " << myPen.GetBrand() << "\n";
+cout << "Color: " << myPen.GetColor() << "\n";
+cout << "Tip Type: " << myPen.GetTipType() << "\n";
+cout << "Is Clickable? " << (myPen.GetIsClickable() ? "Yes" : "No") << "\n";
+cout << "Ink Type: " << myPen.GetInkType() << "\n";
 
-    //// Тестирование класса Pan
-    //Pan myPen;
-    //myPen.SetBrand("Parker");
-    //myPen.SetColor("Blue");
-    //myPen.SetTipType("Ballpoint");
-    //myPen.SetIsClickable(true);
-    //myPen.SetInkType("Gel");
+// Тестирование класса Laptop
+Laptop myLaptop;
+myLaptop.SetBrand("HP");
+myLaptop.SetModel("HP ZBook 17 G3");
+myLaptop.SetRamGB(16);
+myLaptop.SetHardDiskSize(1000);
+myLaptop.SetScreenSizeInches(17.3);
 
-    //cout << "Pen Details:\n";
-    //cout << "Brand: " << myPen.GetBrand() << "\n";
-    //cout << "Color: " << myPen.GetColor() << "\n";
-    //cout << "Tip Type: " << myPen.GetTipType() << "\n";
-    //cout << "Is Clickable? " << (myPen.GetIsClickable() ? "Yes" : "No") << "\n";
-    //cout << "Ink Type: " << myPen.GetInkType() << "\n";
+cout << "Laptop Details:\n";
+cout << "Brand: " << myLaptop.GetBrand() << "\n";
+cout << "Model: " << myLaptop.GetModel() << "\n";
+cout << "RAM: " << myLaptop.GetRamGB() << "GB" << "\n";
+cout << "Hard Disk Size: " << myLaptop.GetHardDiskSize() << "GB" << "\n";
+cout << "Screen Size: " << myLaptop.GetScreenSizeInches() << " inches" << "\n";
 
-    //// Тестирование класса Laptop
-    //Laptop myLaptop;
-    //myLaptop.SetBrand("HP");
-    //myLaptop.SetModel("HP ZBook 17 G3");
-    //myLaptop.SetRamGB(16);
-    //myLaptop.SetHardDiskSize(1000);
-    //myLaptop.SetScreenSizeInches(17.3);
+// Тестирование класса LEOController
+LEOController myLEOController;
+myLEOController.SetModel("LEO-100");
+myLEOController.SetBatteryLevel(80);
+myLEOController.SetColorCount(16777216);
+myLEOController.SetManufacturer("ABC Electronics");
+myLEOController.SetNumberOfModes(5);
 
-    //cout << "Laptop Details:\n";
-    //cout << "Brand: " << myLaptop.GetBrand() << "\n";
-    //cout << "Model: " << myLaptop.GetModel() << "\n";
-    //cout << "RAM: " << myLaptop.GetRamGB() << "GB" << "\n";
-    //cout << "Hard Disk Size: " << myLaptop.GetHardDiskSize() << "GB" << "\n";
-    //cout << "Screen Size: " << myLaptop.GetScreenSizeInches() << " inches" << "\n";
+cout << "LEO Controller Details:\n";
+cout << "Model: " << myLEOController.GetModel() << "\n";
+cout << "Battery Level: " << myLEOController.GetBatteryLevel() << "%" << "\n";
+cout << "Color Count: " << myLEOController.GetColorCount() << "\n";
+cout << "Manufacturer: " << myLEOController.GetManufacturer() << "\n";
+cout << "Number of Modes: " << myLEOController.GetNumberOfModes() << "\n";
 
-    //// Тестирование класса LEOController
-    //LEOController myLEOController;
-    //myLEOController.SetModel("LEO-100");
-    //myLEOController.SetBatteryLevel(80);
-    //myLEOController.SetColorCount(16777216);
-    //myLEOController.SetManufacturer("ABC Electronics");
-    //myLEOController.SetNumberOfModes(5);
+// Тестирование класса Mouse
+Mouse myMouse;
+myMouse.SetBrand("Hator");
+myMouse.SetModel("Pulsar Pro Wireless");
+myMouse.SetIsWireless(true);
+myMouse.SetBatteryLevel(70);
+myMouse.SetNumberOfButtons(6);
 
-    //cout << "LEO Controller Details:\n";
-    //cout << "Model: " << myLEOController.GetModel() << "\n";
-    //cout << "Battery Level: " << myLEOController.GetBatteryLevel() << "%" << "\n";
-    //cout << "Color Count: " << myLEOController.GetColorCount() << "\n";
-    //cout << "Manufacturer: " << myLEOController.GetManufacturer() << "\n";
-    //cout << "Number of Modes: " << myLEOController.GetNumberOfModes() << "\n";
-
-    //// Тестирование класса Mouse
-    //Mouse myMouse;
-    //myMouse.SetBrand("Hator");
-    //myMouse.SetModel("Pulsar Pro Wireless");
-    //myMouse.SetIsWireless(true);
-    //myMouse.SetBatteryLevel(70);
-    //myMouse.SetNumberOfButtons(6);
-
-    //cout << "Mouse Details:\n";
-    //cout << "Brand: " << myMouse.GetBrand() << "\n";
-    //cout << "Model: " << myMouse.GetModel() << "\n";
-    //cout << "Is Wireless? " << (myMouse.GetIsWireless() ? "Yes" : "No") << "\n";
-    //cout << "Battery Level: " << myMouse.GetBatteryLevel() << "%" << "\n";
-    //cout << "Number of Buttons: " << myMouse.GetNumberOfButtons() << "\n";
+cout << "Mouse Details:\n";
+cout << "Brand: " << myMouse.GetBrand() << "\n";
+cout << "Model: " << myMouse.GetModel() << "\n";
+cout << "Is Wireless? " << (myMouse.GetIsWireless() ? "Yes" : "No") << "\n";
+cout << "Battery Level: " << myMouse.GetBatteryLevel() << "%" << "\n";
+cout << "Number of Buttons: " << myMouse.GetNumberOfButtons() << "\n";
 }
