@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 class Phone {
@@ -14,16 +14,16 @@ public:
     Phone() 
     {
         cout << "C-TOR without parameters\n";
-        SetBrand("");
-        SetModel("");
-        SetStorageSizeGB(0);
-        SetDisplayType("");
-        SetIsSmartphone(false);
+        SetBrand("Iphone");
+        SetModel("11");
+        SetStorageSizeGB(128);
+        SetDisplayType("AMOLED");
+        SetIsSmartphone(true);
     }
 
     Phone(const string& brand, const string& model, int storageSizeGB, const string& displayType, bool isSmartphone)
     {
-        cout << "C-TOR with 5 parameter\n";
+        cout << "\nC-TOR with 5 parameter\n";
         SetBrand(brand);
         SetModel(model);
         SetStorageSizeGB(storageSizeGB);
@@ -54,6 +54,16 @@ public:
     void PlatMusic()
     {
         cout << "Playing music...\n";
+    }
+
+    void Print() const
+    {
+        cout << "Phone Details:\n";
+        cout << "Brand: " << GetBrand() << "\n";
+        cout << "Model: " << GetModel() << "\n";
+        cout << "Storage Size: " << GetStorageSizeGB() << "GB" << "\n";
+        cout << "Display Type: " << GetDisplayType() << "\n";
+        cout << "Is Smartphone? " << (GetIsSmartphone() ? "Yes" : "No") << "\n";
     }
 
     string GetBrand() const {
@@ -111,16 +121,16 @@ public:
     Pan()
     {
         cout << "\nC-TOR without parameters\n";
-        SetColor("");
-        SetBrand("");
-        SetTipType("");
-        SetIsClickable(false);
-        SetInkType("");
+        SetBrand("Parker");
+        SetColor("Blue");
+        SetTipType("Ballpoint");
+        SetIsClickable(true);
+        SetInkType("Gel");
     }
 
     Pan(const string& color, const string& brand, const string& tipType, bool isClickable, const string& inkType)
     {
-        cout << "C-TOR with 5 parameter\n";
+        cout << "\nC-TOR with 5 parameter\n";
         SetColor(color);
         SetBrand(brand);
         SetTipType(tipType);
@@ -157,6 +167,16 @@ public:
     void RefillInk()
     {
         cout << "Refilling ink...\n";
+    }
+
+    void Print() const
+    {
+        cout << "Pen Details:\n";
+        cout << "Brand: " << GetBrand() << "\n";
+        cout << "Color: " << GetColor() << "\n";
+        cout << "Tip Type: " << GetTipType() << "\n";
+        cout << "Is Clickable? " << (GetIsClickable() ? "Yes" : "No") << "\n";
+        cout << "Ink Type: " << GetInkType() << "\n";
     }
 
     string GetColor() const {
@@ -214,16 +234,16 @@ public:
     Laptop()
     {
         cout << "\nC-TOR without parameters\n";
-        SetBrand("");
-        SetModel("");
-        SetRamGB(0);
-        SetHardDiskSize(0);
-        SetScreenSizeInches(0.0);
+        SetBrand("HP");
+        SetModel("HP ZBook 17 G3");
+        SetRamGB(16);
+        SetHardDiskSize(1000);
+        SetScreenSizeInches(17.3);
     }
 
     Laptop(const string& brand, const string& model, int ramGB, int hardDiskSize, float screenSizeInches)
     {
-        cout << "C-TOR with 5 parameter\n";
+        cout << "\nC-TOR with 5 parameter\n";
         SetBrand(brand);
         SetModel(model);
         SetRamGB(ramGB);
@@ -295,6 +315,16 @@ public:
     {
         cout << "There's an Internet check...\n";
     }
+
+    void Print() const
+    {
+        cout << "Laptop Details:\n";
+        cout << "Brand: " << GetBrand() << "\n";
+        cout << "Model: " << GetModel() << "\n";
+        cout << "RAM: " << GetRamGB() << "GB" << "\n";
+        cout << "Hard Disk Size: " << GetHardDiskSize() << "GB" << "\n";
+        cout << "Screen Size: " << GetScreenSizeInches() << " inches" << "\n";
+    }
 };
 
 
@@ -311,16 +341,16 @@ public:
     LEOController()
     {
         cout << "\nC-TOR without parameters\n";
-        SetModel("");
-        SetBatteryLevel(0);
-        SetColorCount(0);
-        SetManufacturer(nullptr);
-        SetNumberOfModes(0);
+        SetModel("LEO-100");
+        SetBatteryLevel(80);
+        SetColorCount(16777216);
+        SetManufacturer("ABC Electronics");
+        SetNumberOfModes(5);
     }
 
     LEOController(const string& model, int batteryLevel, unsigned long long colorCount, const char* manufacturer, int numberOfModes)
     {
-        cout << "C-TOR with 5 parameter\n";
+        cout << "\nC-TOR with 5 parameter\n";
         SetModel(model);
         SetBatteryLevel(batteryLevel);
         SetColorCount(colorCount);
@@ -349,6 +379,16 @@ public:
 
     void ChangeBrightness(int level) {
         cout << "Changing brightness to level " << level << "\n";
+    }
+
+    void Print() const
+    {
+        cout << "LEO Controller Details:\n";
+        cout << "Model: " << GetModel() << "\n";
+        cout << "Battery Level: " << GetBatteryLevel() << "%" << "\n";
+        cout << "Color Count: " << GetColorCount() << "\n";
+        cout << "Manufacturer: " << GetManufacturer() << "\n";
+        cout << "Number of Modes: " << GetNumberOfModes() << "\n";
     }
 
     string GetModel() const {
@@ -406,16 +446,16 @@ public:
     Mouse()
     {
         cout << "\nC-TOR without parameters\n";
-        SetBrand("");
-        SetModel("");
-        SetIsWireless(false);
-        SetBatteryLevel(0);
-        SetNumberOfButtons(0);
+        SetBrand("Hator");
+        SetModel("Pulsar Pro Wireless");
+        SetIsWireless(true);
+        SetBatteryLevel(70);
+        SetNumberOfButtons(6);
     }
 
     Mouse(const string& brand, const string& model, bool isWireless, int batteryLevel, int numberOfButtons)
     {
-        cout << "C-TOR with 5 parameter\n";
+        cout << "\nC-TOR with 5 parameter\n";
         SetBrand(brand);
         SetModel(model);
         SetIsWireless(isWireless);
@@ -442,6 +482,16 @@ public:
     {
         int buttons = numberOfButtons;
         cout << "Mouse buttons set to " << numberOfButtons;
+    }
+
+    void Print() const
+    {
+       cout << "Mouse Details:\n";
+       cout << "Brand: " << GetBrand() << "\n";
+       cout << "Model: " << GetModel() << "\n";
+       cout << "Is Wireless? " << (GetIsWireless() ? "Yes" : "No") << "\n";
+       cout << "Battery Level: " << GetBatteryLevel() << "%" << "\n";
+       cout << "Number of Buttons: " << GetNumberOfButtons() << "\n";
     }
 
     bool IsWirelessConnected() const {
@@ -491,79 +541,37 @@ public:
 
 int main()
 {
+    Phone myPhone;
+    myPhone.Print();
 
-//Тестирование класса Phone
-Phone myPhone;
-myPhone.SetBrand("Iphone");
-myPhone.SetModel("11");
-myPhone.SetStorageSizeGB(128);
-myPhone.SetDisplayType("AMOLED");
-myPhone.SetIsSmartphone(true);
+    Phone myPhoneWithArgs("Iphone", "11", 128, "AMOLED", true); 
+    myPhoneWithArgs.Print();
+    cout << "----------------------------";
 
-cout << "Phone Details:\n";
-cout << "Brand: " << myPhone.GetBrand() << "\n";
-cout << "Model: " << myPhone.GetModel() << "\n";
-cout << "Storage Size: " << myPhone.GetStorageSizeGB() << "GB" << "\n";
-cout << "Display Type: " << myPhone.GetDisplayType() << "\n";
-cout << "Is Smartphone? " << (myPhone.GetIsSmartphone() ? "Yes" : "No") << "\n";
+    Pan myPan;
+    myPan.Print();
 
-// Тестирование класса Pan
-Pan myPen;
-myPen.SetBrand("Parker");
-myPen.SetColor("Blue");
-myPen.SetTipType("Ballpoint");
-myPen.SetIsClickable(true);
-myPen.SetInkType("Gel");
+    Pan myPanWithArgs("Blue", "Parker", "Ballpoint", true, "Gel");
+    myPanWithArgs.Print();
+    cout << "----------------------------";
 
-cout << "Pen Details:\n";
-cout << "Brand: " << myPen.GetBrand() << "\n";
-cout << "Color: " << myPen.GetColor() << "\n";
-cout << "Tip Type: " << myPen.GetTipType() << "\n";
-cout << "Is Clickable? " << (myPen.GetIsClickable() ? "Yes" : "No") << "\n";
-cout << "Ink Type: " << myPen.GetInkType() << "\n";
+    Laptop myLaptop;
+    myLaptop.Print();
 
-// Тестирование класса Laptop
-Laptop myLaptop;
-myLaptop.SetBrand("HP");
-myLaptop.SetModel("HP ZBook 17 G3");
-myLaptop.SetRamGB(16);
-myLaptop.SetHardDiskSize(1000);
-myLaptop.SetScreenSizeInches(17.3);
+    Laptop myLaptopWithArgs("HP", "HP ZBook 17 G3", 16, 1000, 17.3);
+    myLaptopWithArgs.Print();
+    cout << "----------------------------";
+    
+    LEOController myLEOController;
+    myLEOController.Print();
 
-cout << "Laptop Details:\n";
-cout << "Brand: " << myLaptop.GetBrand() << "\n";
-cout << "Model: " << myLaptop.GetModel() << "\n";
-cout << "RAM: " << myLaptop.GetRamGB() << "GB" << "\n";
-cout << "Hard Disk Size: " << myLaptop.GetHardDiskSize() << "GB" << "\n";
-cout << "Screen Size: " << myLaptop.GetScreenSizeInches() << " inches" << "\n";
+    LEOController myLEOControllerWithArgs("LEO-100", 80, 16777216, "ABC Electronics", 5);
+    myLEOController.Print();
+    cout << "----------------------------";
+    
+    Mouse myMouse;
+    myMouse.Print();
 
-// Тестирование класса LEOController
-LEOController myLEOController;
-myLEOController.SetModel("LEO-100");
-myLEOController.SetBatteryLevel(80);
-myLEOController.SetColorCount(16777216);
-myLEOController.SetManufacturer("ABC Electronics");
-myLEOController.SetNumberOfModes(5);
-
-cout << "LEO Controller Details:\n";
-cout << "Model: " << myLEOController.GetModel() << "\n";
-cout << "Battery Level: " << myLEOController.GetBatteryLevel() << "%" << "\n";
-cout << "Color Count: " << myLEOController.GetColorCount() << "\n";
-cout << "Manufacturer: " << myLEOController.GetManufacturer() << "\n";
-cout << "Number of Modes: " << myLEOController.GetNumberOfModes() << "\n";
-
-// Тестирование класса Mouse
-Mouse myMouse;
-myMouse.SetBrand("Hator");
-myMouse.SetModel("Pulsar Pro Wireless");
-myMouse.SetIsWireless(true);
-myMouse.SetBatteryLevel(70);
-myMouse.SetNumberOfButtons(6);
-
-cout << "Mouse Details:\n";
-cout << "Brand: " << myMouse.GetBrand() << "\n";
-cout << "Model: " << myMouse.GetModel() << "\n";
-cout << "Is Wireless? " << (myMouse.GetIsWireless() ? "Yes" : "No") << "\n";
-cout << "Battery Level: " << myMouse.GetBatteryLevel() << "%" << "\n";
-cout << "Number of Buttons: " << myMouse.GetNumberOfButtons() << "\n";
+    Mouse myMouseWithArgs("Hator", "Pulsar Pro Wireless", true, 70, 6);
+    myMouse.Print();
 }
